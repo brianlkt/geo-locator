@@ -10,7 +10,7 @@ const app = createApp(App);
 app.use(GoogleMap, {
   load: {
     key: 'AIzaSyAyGuJCBy-Pf7RqNAJEChAlLl8AiQsmTzQ',
-    libraries: 'places', // Optional libraries
+    libraries: 'places',
   },
 });
 

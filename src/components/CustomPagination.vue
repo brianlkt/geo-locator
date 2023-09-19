@@ -17,7 +17,6 @@ export default {
   methods: {
     changePage(newPage) {
       if (newPage < 1 || newPage > this.pageCount || newPage === this.currentPage) {
-        // Do nothing if the newPage is out of bounds or the same as the current page.
         return;
       }
       this.$emit('page-change', newPage);
