@@ -66,7 +66,7 @@
     <!-- Display the map with markers -->
     <div class="mb-4"> 
       <GoogleMap
-        api-key="AIzaSyAyGuJCBy-Pf7RqNAJEChAlLl8AiQsmTzQ"
+        api-key="APIKEY"
         style="width: 100%; height: 40vh"
         :center="center"
         :zoom="15"
@@ -131,7 +131,7 @@ export default defineComponent({
 
     const fetchTimezoneAndLocalTime = async (location) => {
       try {
-        const apiKey = "AIzaSyAyGuJCBy-Pf7RqNAJEChAlLl8AiQsmTzQ";
+        const apiKey = "APIKEY";
         const timestamp = Math.floor(Date.now() / 1000);
 
         const response = await fetch(
@@ -169,7 +169,7 @@ export default defineComponent({
       isLoading.value = true;
 
       try {
-        const apiKey = "AIzaSyAyGuJCBy-Pf7RqNAJEChAlLl8AiQsmTzQ";
+        const apiKey = "APIKEY";
         const response = await fetch(
           `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
             localSearchQuery.value
