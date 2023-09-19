@@ -1,4 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import 'bootstrap/dist/css/bootstrap.css';
 
-createApp(App).mount('#app')
+import { createApp } from 'vue';
+import App from './App.vue';
+import { GoogleMap } from 'vue3-google-map';
+
+
+const app = createApp(App);
+
+app.use(GoogleMap, {
+  load: {
+    key: 'AIzaSyAyGuJCBy-Pf7RqNAJEChAlLl8AiQsmTzQ',
+    libraries: 'places', // Optional libraries
+  },
+});
+
+app.mount('#app');
